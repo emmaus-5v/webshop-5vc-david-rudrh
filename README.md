@@ -9,8 +9,8 @@ of in Gitpod (gitpod is zonder mailen van orders en zonder permanent hosten):
 ### In mijn webshop vind je: 
 - Games
 ### Deze webshop is gemaakt door: 
-- Rudrh Kapoor
 - David Beugelsdijk
+- Rudrh Kapoor
 
 # Mijn aanpak
 Werk de planning af van boven naar beneden<br>
