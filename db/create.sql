@@ -21,7 +21,7 @@ CREATE TABLE products (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price) values ('GTA VI', 'Follow-up of GTA V. A game in which you can do whatever you want, primarily being a criminal. Oh, and you can race as well.', '891778674-5', 49,95);
+insert into products (name, description, code, price) values ('GTA VI', 'Follow-up game of GTA V. A game in which you can do whatever you want, primarily being a criminal. Oh, and you can race as well.', '891778674-5', 49,95);
 insert into products (name, description, code, price) values ('Post Mortem', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.
 
 Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.
