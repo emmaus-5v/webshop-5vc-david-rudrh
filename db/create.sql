@@ -50,7 +50,7 @@ Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 
 insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Call of Duty: Black Ops 6', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 60, 3, 4);
-insert into products (name, description, code, price, rating_id. MinimumAge_id) values ('One Piece RPG', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
+insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('One Piece RPG', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 40, 4, 1);
 insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Robooy Hunt Quest', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
