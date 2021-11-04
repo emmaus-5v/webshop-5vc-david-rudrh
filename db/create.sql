@@ -98,10 +98,12 @@ CREATE TABLE GameGenre_Game (
 );
 
 insert into GameGenre_Game (products_id, typegame_id) values (1, 2);
+insert into GameGenre_Game (products_id, typegame_id) values (1, 4);
 insert into GameGenre_Game (products_id, typegame_id) values (1, 9);
 insert into GameGenre_Game (products_id, typegame_id) values (1, 12);
 insert into GameGenre_Game (products_id, typegame_id) values (1, 13);
 insert into GameGenre_Game (products_id, typegame_id) values (2, 3);
+insert into GameGenre_Game (products_id, typegame_id) values (2, 4);
 insert into GameGenre_Game (products_id, typegame_id) values (2, 13);
 insert into GameGenre_Game (products_id, typegame_id) values (3, 1);
 insert into GameGenre_Game (products_id, typegame_id) values (3, 12);
