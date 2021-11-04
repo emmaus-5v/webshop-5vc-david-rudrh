@@ -69,7 +69,7 @@ insert into ratings (rating) values ("A good game worth of playing");
 insert into ratings (rating) values ("An awesome game we admire");
 insert into ratings (rating) values ("One of the best games in the world");
 
-/*DROP TABLE IF EXISTS GameGenre;
+DROP TABLE IF EXISTS GameGenre;
 CREATE TABLE typegame (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   typegame TEXT
@@ -123,4 +123,3 @@ insert into typegamenaam (products_id, typegame_id) values (10, 6);
 insert into typegamenaam (products_id, typegame_id) values (10, 9);
 insert into typegamenaam (products_id, typegame_id) values (11, 10);
 insert into typegamenaam (products_id, typegame_id) values (11, 13);
-*/
