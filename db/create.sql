@@ -55,7 +55,7 @@ insert into products (name, description, code, price, rating_id) values ('Squid 
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 30, "3");
 
-DROP TABLE IF EXISTS ratings;
+DROP TABLE IF EXISTS rating;
 CREATE TABLE rating (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   rating TEXT
