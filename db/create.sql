@@ -43,8 +43,24 @@ insert into products (name, description, code, price, rating) values ('My Hero A
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 30, "9.5/10");
 
+
+
+
+
+
+
+
+
+
+
+
+
 CREATE TABLE rating (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   rating TEXT
 );
 
+insert into rating (rating) values ("A decent game");
+insert into rating (rating) values ("A good game worth of playing");
+insert into rating (rating) values ("An awesome game we admire");
+insert into rating (rating) values ("One of the best games in the world");
