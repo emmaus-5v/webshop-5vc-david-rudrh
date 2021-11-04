@@ -58,36 +58,36 @@ insert into products (name, description, code, price, rating_id) values ('Blimbs
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 4,95, 3);
 
-DROP TABLE IF EXISTS rating;
-CREATE TABLE rating (
+DROP TABLE IF EXISTS ratings;
+CREATE TABLE ratings (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   rating TEXT
 );
 
-insert into rating (rating) values ("A decent game");
-insert into rating (rating) values ("A good game worth of playing");
-insert into rating (rating) values ("An awesome game we admire");
-insert into rating (rating) values ("One of the best games in the world");
+insert into ratings (rating) values ("A decent game");
+insert into ratings (rating) values ("A good game worth of playing");
+insert into ratings (rating) values ("An awesome game we admire");
+insert into ratings (rating) values ("One of the best games in the world");
 
-DROP TABLE IF EXISTS typegame;
+DROP TABLE IF EXISTS GameGenre;
 CREATE TABLE typegame (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   typegame TEXT
 );
 
-insert into typegame (typegame) values ("RPG");
-insert into typegame (typegame) values ("MMORPG");
-insert into typegame (typegame) values ("Survival");
-insert into typegame (typegame) values ("Shooter");
-insert into typegame (typegame) values ("Platform");
-insert into typegame (typegame) values ("Battle Royale");
-insert into typegame (typegame) values ("Horror");
-insert into typegame (typegame) values ("Sport");
-insert into typegame (typegame) values ("Racing");
-insert into typegame (typegame) values ("Wargame");
-insert into typegame (typegame) values ("Tower Defense");
-insert into typegame (typegame) values ("Open World");
-insert into typegame (typegame) values ("Multiplayer")
+insert into GameGenre (typegame) values ("RPG");
+insert into GameGenre (typegame) values ("MMORPG");
+insert into GameGenre (typegame) values ("Survival");
+insert into GameGenre (typegame) values ("Shooter");
+insert into GameGenre (typegame) values ("Platform");
+insert into GameGenre (typegame) values ("Battle Royale");
+insert into GameGenre (typegame) values ("Horror");
+insert into GameGenre (typegame) values ("Sport");
+insert into GameGenre (typegame) values ("Racing");
+insert into GameGenre (typegame) values ("Wargame");
+insert into GameGenre (typegame) values ("Tower Defense");
+insert into GameGenre (typegame) values ("Open World");
+insert into GameGenre (typegame) values ("Multiplayer")
 
 DROP TABLE IF EXISTS typegamenaam;
 CREATE TABLE typegamenaam (
