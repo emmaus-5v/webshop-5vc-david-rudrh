@@ -3,6 +3,7 @@
 --
 
 DROP TABLE IF EXISTS products; 
+DROP TABLE IF EXISTS ratings;
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
@@ -58,7 +59,6 @@ insert into products (name, description, code, price, rating_id) values ('Blimbs
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 4,95, 3);
 
-/*DROP TABLE IF EXISTS ratings;
 CREATE TABLE ratings (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   rating TEXT
@@ -69,7 +69,7 @@ insert into ratings (rating) values ("A good game worth of playing");
 insert into ratings (rating) values ("An awesome game we admire");
 insert into ratings (rating) values ("One of the best games in the world");
 
-DROP TABLE IF EXISTS GameGenre;
+/*DROP TABLE IF EXISTS GameGenre;
 CREATE TABLE typegame (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   typegame TEXT
@@ -97,6 +97,7 @@ CREATE TABLE typegamenaam (
 );
 
 insert into typegamenaam (products_id, typegame_id) values (1, 2);
+insert into typegamenaam (products_id, typegame_id) values (1, 9);
 insert into typegamenaam (products_id, typegame_id) values (1, 12);
 insert into typegamenaam (products_id, typegame_id) values (1, 13);
 insert into typegamenaam (products_id, typegame_id) values (2, 3);
