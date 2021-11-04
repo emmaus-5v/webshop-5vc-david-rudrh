@@ -89,7 +89,7 @@ insert into GameGenre (typegame) values ("Racing");
 insert into GameGenre (typegame) values ("Wargame");
 insert into GameGenre (typegame) values ("Tower Defense");
 insert into GameGenre (typegame) values ("Open World");
-insert into GameGenre (typegame) values ("Multiplayer")
+insert into GameGenre (typegame) values ("Multiplayer");
 
 CREATE TABLE typegamenaam (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
