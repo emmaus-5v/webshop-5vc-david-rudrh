@@ -126,3 +126,14 @@ insert into GameGenre_Game (products_id, typegame_id) values (10, 6);
 insert into GameGenre_Game (products_id, typegame_id) values (10, 9);
 insert into GameGenre_Game (products_id, typegame_id) values (11, 10);
 insert into GameGenre_Game (products_id, typegame_id) values (11, 13);
+
+CREATE TABLE MinimumAge (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  MinimumAge TEXT
+);
+
+insert into MinimumAge (MinimumAge) values ("All ages");
+insert into MinimumAge (MinimumAge) values ("7+");
+insert into MinimumAge (MinimumAge) values ("12+");
+insert into MinimumAge (MinimumAge) values ("16+");
+insert into MinimumAge (MinimumAge) values ("18+");
