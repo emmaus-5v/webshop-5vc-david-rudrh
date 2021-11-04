@@ -4,6 +4,9 @@
 
 DROP TABLE IF EXISTS products; 
 DROP TABLE IF EXISTS ratings;
+DROP TABLE IF EXISTS GameGenre;
+DROP TABLE IF EXISTS typegamenaam;
+
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
@@ -69,7 +72,6 @@ insert into ratings (rating) values ("A good game worth of playing");
 insert into ratings (rating) values ("An awesome game we admire");
 insert into ratings (rating) values ("One of the best games in the world");
 
-DROP TABLE IF EXISTS GameGenre;
 CREATE TABLE typegame (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   typegame TEXT
@@ -89,7 +91,6 @@ insert into GameGenre (typegame) values ("Tower Defense");
 insert into GameGenre (typegame) values ("Open World");
 insert into GameGenre (typegame) values ("Multiplayer")
 
-DROP TABLE IF EXISTS typegamenaam;
 CREATE TABLE typegamenaam (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   products_id INTEGER,
