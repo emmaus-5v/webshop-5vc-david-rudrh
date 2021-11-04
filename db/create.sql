@@ -72,7 +72,7 @@ insert into ratings (rating) values ("A good game worth of playing");
 insert into ratings (rating) values ("An awesome game we admire");
 insert into ratings (rating) values ("One of the best games in the world");
 
-CREATE TABLE typegame (
+CREATE TABLE GameGenre (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   typegame TEXT
 );
