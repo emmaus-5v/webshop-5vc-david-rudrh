@@ -65,3 +65,41 @@ insert into rating (rating) values ("A decent game");
 insert into rating (rating) values ("A good game worth of playing");
 insert into rating (rating) values ("An awesome game we admire");
 insert into rating (rating) values ("One of the best games in the world");
+
+DROP TABLE IF EXISTS typegame;
+CREATE TABLE typegame (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  typegame TEXT
+);
+
+insert into typegame (typegame) values ("RPG");
+insert into typegame (typegame) values ("MMORPG");
+insert into typegame (typegame) values ("Survival");
+insert into typegame (typegame) values ("Shooter");
+insert into typegame (typegame) values ("RPG");
+insert into typegame (typegame) values ("Plaform");
+insert into typegame (typegame) values ("Battle Royale");
+insert into typegame (typegame) values ("Horror");
+insert into typegame (typegame) values ("Sport");
+insert into typegame (typegame) values ("Racing");
+insert into typegame (typegame) values ("Wargame");
+insert into typegame (typegame) values ("Tower Defense");
+
+DROP TABLE IF EXISTS typegamenaam;
+CREATE TABLE typegamenaam (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  products_id INTEGER,
+  typegame_id INTEGER
+
+);
+
+insert into typegamenaam (products_id, typegame_id) values (1, 2);
+insert into typegamenaam (products_id, typegame_id) values (2, 3);
+insert into typegamenaam (products_id, typegame_id) values (3, 1);
+insert into typegamenaam (products_id, typegame_id) values (4, 3);
+insert into typegamenaam (products_id, typegame_id) values (5, 9);
+insert into typegamenaam (products_id, typegame_id) values (6, 1);
+insert into typegamenaam (products_id, typegame_id) values (7, 4);
+insert into typegamenaam (products_id, typegame_id) values (8, 1);
+insert into typegamenaam (products_id, typegame_id) values (9, 8);
+insert into typegamenaam (products_id, typegame_id) values (10,3);
