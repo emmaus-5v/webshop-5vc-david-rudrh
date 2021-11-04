@@ -58,7 +58,7 @@ insert into products (name, description, code, price, rating_id) values ('Blimbs
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 4,95, 3);
 
-/*DROP TABLE IF EXISTS ratings;
+DROP TABLE IF EXISTS ratings;
 CREATE TABLE ratings (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   rating TEXT
@@ -122,4 +122,3 @@ insert into typegamenaam (products_id, typegame_id) values (10, 6);
 insert into typegamenaam (products_id, typegame_id) values (10, 9);
 insert into typegamenaam (products_id, typegame_id) values (11, 10);
 insert into typegamenaam (products_id, typegame_id) values (11, 13);
-*/
