@@ -5,7 +5,7 @@
 DROP TABLE IF EXISTS products; 
 DROP TABLE IF EXISTS ratings;
 DROP TABLE IF EXISTS GameGenre;
-DROP TABLE IF EXISTS typegamenaam;
+DROP TABLE IF EXISTS GameGenre_Game;
 
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -91,36 +91,36 @@ insert into GameGenre (typegame) values ("Tower Defense");
 insert into GameGenre (typegame) values ("Open World");
 insert into GameGenre (typegame) values ("Multiplayer");
 
-CREATE TABLE typegamenaam (
+CREATE TABLE GameGenre_Game (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   products_id INTEGER,
   typegame_id INTEGER
 );
 
-insert into typegamenaam (products_id, typegame_id) values (1, 2);
-insert into typegamenaam (products_id, typegame_id) values (1, 9);
-insert into typegamenaam (products_id, typegame_id) values (1, 12);
-insert into typegamenaam (products_id, typegame_id) values (1, 13);
-insert into typegamenaam (products_id, typegame_id) values (2, 3);
-insert into typegamenaam (products_id, typegame_id) values (2, 13);
-insert into typegamenaam (products_id, typegame_id) values (3, 1);
-insert into typegamenaam (products_id, typegame_id) values (3, 12);
-insert into typegamenaam (products_id, typegame_id) values (4, 3);
-insert into typegamenaam (products_id, typegame_id) values (4, 12);
-insert into typegamenaam (products_id, typegame_id) values (4, 13);
-insert into typegamenaam (products_id, typegame_id) values (5, 8);
-insert into typegamenaam (products_id, typegame_id) values (5, 13);
-insert into typegamenaam (products_id, typegame_id) values (6, 1);
-insert into typegamenaam (products_id, typegame_id) values (6, 12);
-insert into typegamenaam (products_id, typegame_id) values (7, 4);
-insert into typegamenaam (products_id, typegame_id) values (7, 10);
-insert into typegamenaam (products_id, typegame_id) values (7, 13);
-insert into typegamenaam (products_id, typegame_id) values (8, 1);
-insert into typegamenaam (products_id, typegame_id) values (9, 3);
-insert into typegamenaam (products_id, typegame_id) values (9, 5);
-insert into typegamenaam (products_id, typegame_id) values (9, 7);
-insert into typegamenaam (products_id, typegame_id) values (10, 3);
-insert into typegamenaam (products_id, typegame_id) values (10, 6);
-insert into typegamenaam (products_id, typegame_id) values (10, 9);
-insert into typegamenaam (products_id, typegame_id) values (11, 10);
-insert into typegamenaam (products_id, typegame_id) values (11, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (1, 2);
+insert into GameGenre_Game (products_id, typegame_id) values (1, 9);
+insert into GameGenre_Game (products_id, typegame_id) values (1, 12);
+insert into GameGenre_Game (products_id, typegame_id) values (1, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (2, 3);
+insert into GameGenre_Game (products_id, typegame_id) values (2, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (3, 1);
+insert into GameGenre_Game (products_id, typegame_id) values (3, 12);
+insert into GameGenre_Game (products_id, typegame_id) values (4, 3);
+insert into GameGenre_Game (products_id, typegame_id) values (4, 12);
+insert into GameGenre_Game (products_id, typegame_id) values (4, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (5, 8);
+insert into GameGenre_Game (products_id, typegame_id) values (5, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (6, 1);
+insert into GameGenre_Game (products_id, typegame_id) values (6, 12);
+insert into GameGenre_Game (products_id, typegame_id) values (7, 4);
+insert into GameGenre_Game (products_id, typegame_id) values (7, 10);
+insert into GameGenre_Game (products_id, typegame_id) values (7, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (8, 1);
+insert into GameGenre_Game (products_id, typegame_id) values (9, 3);
+insert into GameGenre_Game (products_id, typegame_id) values (9, 5);
+insert into GameGenre_Game (products_id, typegame_id) values (9, 7);
+insert into GameGenre_Game (products_id, typegame_id) values (10, 3);
+insert into GameGenre_Game (products_id, typegame_id) values (10, 6);
+insert into GameGenre_Game (products_id, typegame_id) values (10, 9);
+insert into GameGenre_Game (products_id, typegame_id) values (11, 10);
+insert into GameGenre_Game (products_id, typegame_id) values (11, 13);
