@@ -59,3 +59,7 @@ CREATE TABLE rating (
   rating TEXT
 );
 
+insert into rating (rating) values ("A decent game");
+insert into rating (rating) values ("A good game worth of playing");
+insert into rating (rating) values ("An awesome game we admire");
+insert into rating (rating) values ("One of the best games in the world");
