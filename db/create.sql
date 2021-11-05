@@ -2,7 +2,11 @@
 -- create tables
 --
 
-DROP TABLE IF EXISTS products; 
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS ratings;
+DROP TABLE IF EXISTS GameGenre;
+DROP TABLE IF EXISTS GameGenre_Game;
+DROP TABLE IF EXISTS MinimumAge;
 
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -12,6 +16,27 @@ CREATE TABLE products (
   price NUMERIC(10, 2),
   rating_id INTEGER,
   MinimumAge_id INTEGER
+);
+
+CREATE TABLE ratings (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  rating TEXT
+);
+
+CREATE TABLE GameGenre (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  typegame TEXT
+);
+
+CREATE TABLE GameGenre_Game (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  products_id INTEGER,
+  typegame_id INTEGER
+);
+
+CREATE TABLE MinimumAge (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  MinimumAge TEXT
 );
 
 
@@ -60,20 +85,14 @@ insert into products (name, description, code, price, rating_id, MinimumAge_id) 
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 4.95, 3, 1);
 
-CREATE TABLE ratings (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  rating TEXT
-);
+
 
 insert into ratings (rating) values ("A decent game");
 insert into ratings (rating) values ("A good game worth of playing");
 insert into ratings (rating) values ("An awesome game we admire");
 insert into ratings (rating) values ("One of the best games in the world");
 
-CREATE TABLE GameGenre (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  typegame TEXT
-);
+
 
 insert into GameGenre (typegame) values ("RPG");
 insert into GameGenre (typegame) values ("MMORPG");
@@ -89,11 +108,7 @@ insert into GameGenre (typegame) values ("Tower Defense");
 insert into GameGenre (typegame) values ("Open World");
 insert into GameGenre (typegame) values ("Multiplayer");
 
-CREATE TABLE GameGenre_Game (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  products_id INTEGER,
-  typegame_id INTEGER
-);
+
 
 insert into GameGenre_Game (products_id, typegame_id) values (1, 2);
 insert into GameGenre_Game (products_id, typegame_id) values (1, 4);
@@ -125,10 +140,7 @@ insert into GameGenre_Game (products_id, typegame_id) values (10, 9);
 insert into GameGenre_Game (products_id, typegame_id) values (11, 10);
 insert into GameGenre_Game (products_id, typegame_id) values (11, 13);
 
-CREATE TABLE MinimumAge (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  MinimumAge TEXT
-);
+
 
 insert into MinimumAge (MinimumAge) values ("All ages");
 insert into MinimumAge (MinimumAge) values ("7+");
