@@ -63,15 +63,9 @@ Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet 
 insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('One Piece RPG', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
 
 Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 40, 4, 1);
-insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Robooy Hunt Quest', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 13, 1, 5);
-insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Squid Game Online', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 30, 3, 3);
-insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Blimbs TD Battles', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.
-
-Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.', '492662523-7', 4.95, 3, 1);
+insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Robooy Hunt Quest', 'In this game your goal is to kill Robooy, the man hunting everyone. Going through the levels and getting closer to Robooy, you''ll have to do puzzles, you''ll do parcour and you''ll get scared. The scariest game in the world rated by IGN.', '783467YH6-8', 13, 1, 5);
+insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Squid Game Online', 'A perfect new kind of battle royale. Being based of the popular Netflix series ''Squid Game'', this game''s got a great population so you can play with others anytime you want.', '895734489-T', 30, 3, 3);
+insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Blimbs TD Battles', 'An awesome tower defence game inspired by Bloons TD. This is one of the best single player tower defence games out there.', '7845V55H8-X', 4.95, 3, 1);
 
 
 
