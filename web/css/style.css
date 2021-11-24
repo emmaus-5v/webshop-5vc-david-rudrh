@@ -61,6 +61,10 @@ footer {
   width: 80px
 }
 
+#index {
+  background-color:darkcyan;
+}
+
 /* basket page */
 .product-properties {
   margin-top:20px;
