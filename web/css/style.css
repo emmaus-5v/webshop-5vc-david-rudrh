@@ -25,6 +25,7 @@ footer {
 .card {
   width:200px; 
   height: 700px; 
+  background-color:darkgray;
   margin-bottom: 20px
 }
 
@@ -62,7 +63,11 @@ footer {
 }
 
 #index {
-  background-color:darkcyan;
+  background-color:grey;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background-color:gold;
 }
 
 /* basket page */
