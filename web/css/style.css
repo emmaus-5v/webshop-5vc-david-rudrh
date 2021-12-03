@@ -25,7 +25,6 @@ footer {
 .card {
   width:200px; 
   height: 700px; 
-  background-color:darkgray;
   margin-bottom: 20px
 }
 
@@ -63,7 +62,7 @@ footer {
 }
 
 #index {
-  background-color:grey;
+  background:-webkit-repeating-linear-gradient(80deg, #086194 20%, #66b5da 80%)
 }
 
 .navbar.navbar-expand-lg.navbar-light.bg-light {
