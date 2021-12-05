@@ -34,7 +34,7 @@ CREATE TABLE GameGenre_Game (
   typegame_id INTEGER
 );
 
-CREATE TABLE MinimumAge (
+CREATE TABLE MinimumAges (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   MinimumAge TEXT
 );
