@@ -118,8 +118,8 @@ insert into GameGenre_Game (products_id, typegame_id) values (11, 13);
 
 
 
-insert into MinimumAge (MinimumAge) values ("All ages");
-insert into MinimumAge (MinimumAge) values ("7+");
-insert into MinimumAge (MinimumAge) values ("12+");
-insert into MinimumAge (MinimumAge) values ("16+");
-insert into MinimumAge (MinimumAge) values ("18+");
+insert into MinimumAges (MinimumAge) values ("All ages");
+insert into MinimumAges (MinimumAge) values ("7+");
+insert into MinimumAges (MinimumAge) values ("12+");
+insert into MinimumAges (MinimumAge) values ("16+");
+insert into MinimumAges (MinimumAge) values ("18+");
