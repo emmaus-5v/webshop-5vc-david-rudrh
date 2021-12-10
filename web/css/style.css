@@ -61,9 +61,12 @@ footer {
   width: 80px
 }
 
+nav {
+  background:-webkit-repeating-linear-gradient(82deg, lightblue 0%, lightcyan 800%);
+}
 
 body {
-  background:-webkit-repeating-linear-gradient(82deg, #2983be 40%, #255daf 100%);
+  background:-webkit-repeating-linear-gradient(82deg, #2f8baf 20%, #165979 80%);
 }
 
 /* basket page */
