@@ -48,11 +48,11 @@ footer {
 
 .product img {
   margin: auto;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .product > .card-header {
-  height:3em
+  height: 4em
 }
 
 .product-properties > li > .property-name {
@@ -64,7 +64,7 @@ footer {
 }
 
 nav {
-  background:-webkit-repeating-linear-gradient(82deg, rgb(149, 186, 199) 0%, rgb(178, 202, 202) 800%);
+  background:-webkit-repeating-linear-gradient(82deg, rgb(122, 181, 202) 0%, rgb(139, 199, 199) 800%);
 }
 
 body {
