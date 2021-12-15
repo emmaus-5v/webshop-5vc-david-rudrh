@@ -25,7 +25,9 @@ footer {
 .card {
   width:200px; 
   height: 700px; 
-  margin-bottom: 20px
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card-header {
