@@ -3,6 +3,7 @@
 footer {
   margin: 20px;
   font-size: 12px;
+  color: azure;
 } 
 
 .toast {
@@ -64,7 +65,7 @@ footer {
 }
 
 nav {
-  background:-webkit-repeating-linear-gradient(82deg, rgb(122, 181, 202) 0%, rgb(139, 199, 199) 800%);
+  background:-webkit-repeating-linear-gradient(82deg, rgb(122, 181, 202) 0%, rgb(139, 199, 199) 800%)
 }
 
 body {
