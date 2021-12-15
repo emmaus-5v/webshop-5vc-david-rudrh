@@ -62,7 +62,7 @@ footer {
 }
 
 nav {
-  background:-webkit-repeating-linear-gradient(82deg, lightblue 0%, lightcyan 800%);
+  background:-webkit-repeating-linear-gradient(82deg, rgb(149, 186, 199) 0%, rgb(178, 202, 202) 800%);
 }
 
 body {
