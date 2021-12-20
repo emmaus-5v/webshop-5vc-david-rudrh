@@ -29,6 +29,7 @@ app.get('/api/echo', echoRequest)
 app.get('/api/genres', getGenres)
 app.get('/api/products', getProducts)
 app.get('/api/products/:id', getProductById)
+app.get('/api/products/:genre', getProductByGenre)
 //app.get('/api/products/:id/related', db.getRelatedProductsById)
 // our API is not protected...so let's not expose these
 // app.post('/api/products', createProduct)
@@ -87,6 +88,16 @@ function getProductById(request, response) {
   let data = []
   const product_id = parseInt(request.params.id)
   const sqlOpdracht = db.prepare('SELECT products.id, products.code, products.name, products.description, products.price, ratings.rating, MinimumAges.MinimumAge FROM products JOIN ratings ON ratings.id = products.rating_id JOIN MinimumAges ON MinimumAges.id = products.MinimumAge_id WHERE products.id = ?')
+  data = sqlOpdracht.all(product_id)
+  response.status(200).json(data[0])
+}
+
+function getProductByGenre(request, response) {
+  console.log('API ontvangt /api/products/:Genre/?', request.query)
+
+  let data = []
+  const product_id = parseInt(request.params.id)
+  const sqlOpdracht = db.prepare('SELECT products.id, products.code, products.name, products.description, products.price, GameGenre.typegame FROM GameGenre JOIN GameGenre_Game ON GameGenre_Game.typegame_id = GameGenre.id JOIN products ON products.id = GameGenre_Game.products_id WHERE GameGenre.typegame = ?')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
 }
