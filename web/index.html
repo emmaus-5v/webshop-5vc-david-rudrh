@@ -40,9 +40,7 @@
 			<div class="dropdown">
 				<button class="dropbtn">Genre</button>
 				<div class="dropdown-content">
-				  <a href="#">Link 1</a>
-				  <a href="#">Link 2</a>
-				  <a href="#">Link 3</a>
+				<span>kjsj:</span> <span class="GameGenre"></span>
 				</div>
 			  </div>		
 
@@ -102,10 +100,15 @@
 
         // laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
-        var request = new XMLHttpRequest()
-        request.open('GET', '/api/products', true) 
-        request.onload = showProducts 
-        request.send() 
+        var request1 = new XMLHttpRequest()
+        request1.open('GET', '/api/products', true) 
+        request1.onload = showProducts 
+        request1.send() 
+
+		var request2 = new XMLHttpRequest()
+        request2.open('GET', '/api/genres', true) 
+        request2.onload = showGenres 
+        request2.send() 
 
 
       })();
@@ -140,6 +143,27 @@
               clone.querySelector(".product_id").value = product.id
               clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
               clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
+              container.appendChild(clone)
+            }
+          }
+	function showGenres() {
+      console.log("showGenres called")
+      const template = document.querySelector('.dropdown-content');
+      const app = document.getElementById('index')
+			
+      const container = document.createElement('div')
+      container.setAttribute('class', 'container row article-container')
+
+      app.appendChild(container)
+        
+            var data = JSON.parse(this.response) // vertaal response van API naar array met producten
+            for (let row in data) { // herhaal voor elke product
+              const Genre = data[row]
+
+              // voeg product toe aan DOM, 
+              // zodat deze zichtbaar wordt op de webpagina
+              const clone = template.content.cloneNode(true);
+              clone.querySelector(".GameGenre").textContent = GameGenre.typegame
               container.appendChild(clone)
             }
           }
