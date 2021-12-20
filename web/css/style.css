@@ -105,7 +105,7 @@ body {
 }
 
 #winkelwagen-knop:hover {
-  background-color: #2f8baf;
+  background-color: #215f77;
   border: none;
 }
 
@@ -149,6 +149,8 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #266179;}
 
 /* basket page */
 .product-properties {
