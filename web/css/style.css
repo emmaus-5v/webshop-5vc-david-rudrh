@@ -20,7 +20,7 @@
 footer {
   margin: 20px;
   font-size: 12px;
-  color: azure;
+  color: white;
 } 
 
 .toast {
@@ -110,7 +110,7 @@ body {
 }
 
 #winkelwagen-knop:active {
-  background-color: #165979;
+  border-color: white;
 }
 
 /* Dropdown Button */
