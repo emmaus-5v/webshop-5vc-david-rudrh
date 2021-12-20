@@ -1,4 +1,11 @@
 /* all pages */
+.container {
+  color: white;
+}
+
+#kleurtekst {
+  margin-right: 5px;
+}
 
 footer {
   margin: 20px;
@@ -29,27 +36,31 @@ footer {
   margin-bottom: 20px;
   margin-left: auto;
   margin-right: auto;
+  color: black;
 }
 
 .card-header {
   height: 5em;
+  color: black;
 }
 
 .card-text {
-  min-height:10em
+  min-height:10em;
+  color: black;
 }
 
 /* index page */
 .product{
   width: 100%; 
   height: inherit; 
-  margin-bottom: 20px;
+  margin-bottom: 80px;
   margin-top: 20px;
+  color: black;
 }
 
 .product img {
   margin: auto;
-  margin-top: 60px;
+  margin-top: 90px;
 }
 
 .product > .card-header {
@@ -64,10 +75,12 @@ footer {
   width: 80px
 }
 
+/* kleur voor de navigatiebalk */
 nav {
-  background:-webkit-repeating-linear-gradient(82deg, rgb(122, 181, 202) 0%, rgb(139, 199, 199) 800%)
+  background:-webkit-repeating-linear-gradient(82deg, rgb(122, 181, 202) 0%, rgb(139, 199, 199) 800%);
 }
 
+/* kleur voor de website en footer */
 body {
   background:-webkit-repeating-linear-gradient(82deg, #2f8baf 20%, #165979 80%);
 }
