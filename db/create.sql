@@ -1,13 +1,10 @@
---
--- create tables
---
-
+/* dropt een tabel als die al bestaat */
 DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS ratings;
 DROP TABLE IF EXISTS GameGenre;
 DROP TABLE IF EXISTS GameGenre_Game;
 DROP TABLE IF EXISTS MinimumAges;
-
+/* maakt tabellen */
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
@@ -49,8 +46,9 @@ CREATE TABLE MinimumAges (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('GTA VI', 'Follow-up game of GTA V. A game in which you can do whatever you want, primarily being a criminal. Oh, and you can race as well. There is also a new story that takes place in South and North America. GTA Online has also changed. You''r now able to make your own house and car!!', '891778674-5', 49.95, 4, 5);
-insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Hide Online 2', 'Follow-up game of the mobile game, named Hide Online. It has become a really good survival game, where you need to hide from the seekers to not get shot by them. It is also a mutliplayer game so you can play the game with all of your friends. Games like Hide Online 2 are: GMOD and Minecraft Prophunt. The game is playable on Mobile, Pc and Ps4', '786543564-6', 20, 2, 3);
+/* informatie dat in de tabellen zit */
+insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('GTA VI', 'Follow-up game of GTA V. A game in which you can do whatever you want, primarily being a criminal. Oh, and you can race as well. There is also a new story that takes place in South and North America. GTA Online has also changed. You can make your own house and car!!', '891778674-5', 49.95, 4, 5);
+insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Hide Online 2', 'Follow- up game of the mobile game, named Hide Online. It has become a really good survival game, where you need to hide from the seekers to not get shot by them. It is also a mutliplayer game so you can play the game with all of your friends. Games like Hide Online 2 are: GMOD and Minecraft Prophunt. The game is playable on Mobile, Pc and Ps4', '786543564-6', 20, 2, 3);
 insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('Pokémon Legends: Arceus', 'Pokémon Legends: Arceus is an action role-playing game that preserves the core gameplay of past entries in the main line series. The game is set in a bygone era of the Sinnoh regions history, when it was known as the Hisui region, long before the events of Pokémon Diamond and Pearl take place.', '445924201-X', 60, 3, 2);
 insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('ARK 2', 'Ark 2 is the highly anticipated sequel to Ark: Survival Evolved. In case you''ve never played the first game, it''s a survival game with a twist. Instead of competing for resources with everyday people and animals, you instead have to navigate a world full of dinosaurs and other prehistoric beasts.', '693155505-7', 45, 1, 4);
 insert into products (name, description, code, price, rating_id, MinimumAge_id) values ('FIFA 23', 'FIFA brings The World''s Game to life, letting you play with the biggest leagues, clubs, and players in world football, all with incredible detail and realism.', '686928463-6', 50, 2, 1);
