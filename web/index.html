@@ -37,11 +37,16 @@
 				</li>
 			</ul>
 
-			<div class="dropdown">
+			<div id="genre-item-parent" class="dropdown">
 				<button class="dropbtn">Genre</button>
 				<div class="dropdown-content">
-					<span class="GameGenre"></span>
+					<span class="GameGenre" onClick="showProducts(1)">test genre_id=1</span>
 				</div>
+				<template id="genre-item">
+				  <div class="dropdown-content">
+					<span class="GameGenre" onClick="showProducts(1)">content</span>
+				  </div>
+			    </template>
 			  </div>		
 
 			<a
@@ -112,6 +117,17 @@
 
 
       })();
+   
+	  // deze functie wordt aangeroepen als een genre is geselecteerd
+      // deze functie laadt de producten via de API
+	  function showProductsByGenre(genre_id) {
+		// laad producten
+        // de functie showProducts wordt aangeroepen als er antwoord van de API is
+        var request1 = new XMLHttpRequest()
+        request1.open('GET', '/api/products/'+genre_id, true) 
+        request1.onload = showProducts 
+        request1.send() 
+	  }
 
     // deze functie zet de producten op het scherm
     // nadat de API is aangeroepen
@@ -148,8 +164,8 @@
           }
 	function showGenres() {
       console.log("showGenres called")
-      const template = document.querySelector('.dropdown-content');
-      const app = document.getElementById('index')
+      const template = document.querySelector('#genre-item'); // template (it must be a template, not any tag) that holds html for one option, this html is cloned for each option
+      const app = document.getElementById('genre-item-partent') // parent in the DOM to which children are added for each genre
 			
       const container = document.createElement('div')
       container.setAttribute('class', 'container row article-container')
@@ -164,6 +180,7 @@
               // zodat deze zichtbaar wordt op de webpagina
               const clone = template.content.cloneNode(true);
               clone.querySelector(".GameGenre").textContent = GameGenre.typegame
+			  // hier moet je de property "onSumbit" de juiste waarde geven
               container.appendChild(clone)
             }
           }
