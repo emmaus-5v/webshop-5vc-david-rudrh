@@ -58,7 +58,7 @@ function echoRequest(request, response) {
 function getGenres(request, response) {
   console.log('API ontvangt /api/categories/')
   // TODO: change query to make it return categories
-  const sqlOpdracht = db.prepare('SELECT * FROM GameGenre ORDER BY name ASC')
+  const sqlOpdracht = db.prepare('SELECT * FROM GameGenre ORDER BY typegame ASC')
   const data = sqlOpdracht.all()
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
