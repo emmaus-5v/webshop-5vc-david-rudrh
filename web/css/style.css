@@ -1,15 +1,15 @@
 /* all pages */
 .container {
-  color: white;
+  color: rgb(247, 236, 236);
 }
 
 #link-kleur1 {
-  color: white;
+  color: rgb(247, 236, 236);
   font-size: 16px;
 }
 
 #link-kleur2 {
-  color: white;
+  color: rgb(247, 236, 236);
   font-size: 16px;
 }
 
@@ -20,7 +20,7 @@
 footer {
   margin: 20px;
   font-size: 12px;
-  color: white;
+  color: rgb(247, 236, 236);
 } 
 
 .toast {
@@ -97,7 +97,7 @@ body {
 
 #winkelwagen-knop {
   background-color: #2f8baf;
-  color: white;
+  color: rgb(247, 236, 236);
   padding: 9px;
   font-size: 16px;
   border: none;
@@ -115,7 +115,7 @@ body {
 /* Dropdown Button */
 .dropbtn {
   background-color: #2f8baf;
-  color: white;
+  color: rgb(247, 236, 236);
   padding: 9px;
   font-size: 16px;
   border:2px;
