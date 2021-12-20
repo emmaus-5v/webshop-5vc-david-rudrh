@@ -149,15 +149,13 @@ body {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #2f8baf;}
 
 /* basket page */
 .product-properties {
   margin-top:20px;
   list-style: none; 
   padding-left: 5px; 
-  font-size: 15px"
+  font-size: 15px;
 }
 
 .product_row  .product-properties  li {
