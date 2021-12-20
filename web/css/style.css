@@ -106,11 +106,10 @@ body {
 
 #winkelwagen-knop:hover {
   background-color: #215f77;
-  border: black;
 }
 
 #winkelwagen-knop:active {
-  border-color: white;
+  border: 20px, rgb(117, 40, 40);
 }
 
 /* Dropdown Button */
