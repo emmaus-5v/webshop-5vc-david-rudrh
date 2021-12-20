@@ -45,7 +45,7 @@
             </div>
             <div class="card-body">
               <ul class="product-properties">
-                <li><span class="propert-name">Id:</span><span class="product_id_show"></span></li>
+                <li><span class="propert-name">Id</Code>:</span><span class="product_id_show"></span></li>
                 <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
                 <li><span class="propert-name">Aantal:</span><span class="product_amount_show"></span></li>
               </ul>
@@ -67,8 +67,8 @@
         <div class="container" id="totaal">
             <p>Totaal bedrag: € <span class="sum_products">0.00</span></p>
             <p>
-              <button class="btn btn-outline-dark shop-button" onClick="if(confirm('Winkelwagen legen?')) { emptyBasket(); location.href='basket.html' }">Winkelwagen legen</button> <!-- beetje lomp om hele pagina opnieuw te laden na legen -->
-              <button class="btn btn-outline-dark shop-button" onClick="location.href='index.html'">Verder winkelen</button>
+              <button id='winkelwagen-knop' class="btn btn-outline-dark shop-button" onClick="if(confirm('Winkelwagen legen?')) { emptyBasket(); location.href='basket.html' }">Winkelwagen legen</button> <!-- beetje lomp om hele pagina opnieuw te laden na legen -->
+              <button id='winkelwagen-knop' class="btn btn-outline-dark shop-button" onClick="location.href='index.html'">Verder winkelen</button>
             </p>
         </div>
 
@@ -134,7 +134,7 @@
           </div>
           <p>...en klik op bestellen<p>
           <p>Als ik je bestelling gezien heb, dan ontvang je van mij een Tikkie. Zodra je betaald hebt, stuur ik de spullen op.</p>
-          <button type="button" class="btn btn-outline-success shop-button" onclick="checkout()">Bestellen</button>
+          <button type="button" id='winkelwagen-knop' class="btn btn-outline-success shop-button" onclick="checkout()">Bestellen</button>
         </form>
         
         <!-- bevestiging van bestelling -->
