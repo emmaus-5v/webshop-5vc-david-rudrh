@@ -95,12 +95,25 @@ body {
   background:-webkit-repeating-linear-gradient(82deg, #2f8baf 20%, #165979 80%);
 }
 
+#winkelwagen-knop {
+  background-color: #2f8baf;
+  color: white;
+  padding: 9px;
+  font-size: 16px;
+  border: none;
+
+}
+
+#winkelwagen-knop:hover {
+  background-color: #2f8baf;
+  border: none;
+}
 
 /* Dropdown Button */
 .dropbtn {
   background-color: #2f8baf;
   color: white;
-  padding: 16px;
+  padding: 9px;
   font-size: 16px;
   border: none;
   margin-right: 30px;
