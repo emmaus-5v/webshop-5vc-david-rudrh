@@ -40,11 +40,11 @@
 			<div id="genre-item-parent" class="dropdown">
 				<button class="dropbtn">Genre</button>
 				<div class="dropdown-content">
-					<span class="GameGenre" onClick="showProducts(1)">test genre_id=1</span>
+					<span class="GameGenre" onClick="showProducts()">all</span>
 				</div>
 				<template id="genre-item">
 				  <div class="dropdown-content">
-					<span class="GameGenre" onClick="showProducts(1)">content</span>
+					<span class="GameGenre" onClick="showProductsByGenre(1)">content</span>
 				  </div>
 			    </template>
 			  </div>		
@@ -123,10 +123,10 @@
 	  function showProductsByGenre(genre_id) {
 		// laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
-        var request1 = new XMLHttpRequest()
-        request1.open('GET', '/api/products/'+genre_id, true) 
-        request1.onload = showProducts 
-        request1.send() 
+        var request3 = new XMLHttpRequest()
+        request3.open('GET', `/api/products/${genre_id}`, true) 
+        request3.onload = showProducts 
+        request3.send() 
 	  }
 
     // deze functie zet de producten op het scherm
@@ -162,6 +162,7 @@
               container.appendChild(clone)
             }
           }
+
 	function showGenres() {
       console.log("showGenres called")
       const template = document.querySelector('#genre-item'); // template (it must be a template, not any tag) that holds html for one option, this html is cloned for each option
