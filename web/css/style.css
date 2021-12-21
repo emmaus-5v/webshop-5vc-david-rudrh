@@ -146,13 +146,19 @@ body {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content span:hover {background-color: #ddd;}
+.dropdown-content span:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #266179;}
+.dropdown:hover .dropbtn {
+  background-color: #266179;
+}
 
 /* basket page */
 .product-properties {
