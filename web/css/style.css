@@ -41,7 +41,7 @@ footer {
 }
 
 .card {
-  width:200px; 
+  width: 200px; 
   height: 700px; 
   margin-bottom: 20px;
   margin-left: auto;
@@ -109,7 +109,7 @@ body {
 }
 
 #winkelwagen-knop:active {
-  border: 20px, rgb(117, 40, 40);
+  outline: 20px, rgb(117, 40, 40);
 }
 
 /* Dropdown Button */
@@ -146,13 +146,21 @@ body {
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content span:hover {background-color: #ddd;}
+.dropdown-content span:hover {
+  background-color: #ddd;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #266179;}
+.dropdown:hover .dropbtn {
+  background-color: #266179;
+}
+
 
 /* basket page */
 .product-properties {
