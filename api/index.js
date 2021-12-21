@@ -78,6 +78,7 @@ function getProducts(request, response) {
     data = sqlOpdracht.all()
   }
   // console.log(JSON.stringify(data, null, 2))
+  console.log(data + 'hi')
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')
 }
@@ -87,7 +88,7 @@ function getProductById(request, response) {
 
   let data = []
   const product_id = parseInt(request.params.id)
-  const sqlOpdracht = db.prepare('SELECT products.id, products.code, products.name, products.description, products.price, ratings.rating, MinimumAges.MinimumAge FROM products JOIN ratings ON ratings.id = products.rating_id JOIN MinimumAges ON MinimumAges.id = products.MinimumAge_id WHERE products.id = ?')
+  const sqlOpdracht = db.prepare('SELECT products.id, products.code, products.name, products.description, products.price, ratings.rating, MinimumAges.MinimumAge FROM products JOIN ratings ON ratings.id = products.rating_id JOIN MinimumAges ON MinimumAges.id = products.MinimumAge_id WHERE products.id = ? ORDER BY name ASC')
   data = sqlOpdracht.all(product_id)
   response.status(200).json(data[0])
   console.log('API verstuurt /api/products/:id/?')
@@ -100,7 +101,8 @@ function getProductByGenre(request, response) {
   const genre_id = parseInt(request.params.genre)
   const sqlOpdracht = db.prepare('SELECT products.id, products.code, products.name, products.description, products.price, GameGenre.typegame FROM GameGenre JOIN GameGenre_Game ON GameGenre_Game.typegame_id = GameGenre.id JOIN products ON products.id = GameGenre_Game.products_id WHERE GameGenre.id = ?')
   data = sqlOpdracht.all(genre_id)
-  response.status(200).json(data[0])
+  response.status(200).send(data)
+  console.log(data + 'hi')
   console.log('API verstuurt /api/productsByGenre/:genre/?')
 }
 

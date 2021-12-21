@@ -40,7 +40,7 @@
 			<div id="genre-item-parent" class="dropdown">
 				<button class="dropbtn">Genre</button>
 				<div class="dropdown-content">
-					<span class="GameGenre" onClick="showProducts()">all</span>
+					<span class="GameGenre" onClick="showAllProducts()">all</span>
 				</div>
 				<template id="genre-item">
 				  <div class="dropdown-content">
@@ -120,15 +120,23 @@
    
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
       // deze functie laadt de producten via de API
+
+	  function showAllProducts(){
+		var request3 = new XMLHttpRequest()
+        request3.open('GET', '/api/products', true) 
+        request3.onload = showProducts 
+        request3.send() 
+	  }
+
 	  function showProductsByGenre(genre_id) {
 		console.log("showProductsByGenre called")
 		// laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
-        var request3 = new XMLHttpRequest()
-        request3.open('GET', `/api/productsByGenre/${genre_id}`, true) 
+        var request4 = new XMLHttpRequest()
+        request4.open('GET', `/api/productsByGenre/${genre_id}`, true) 
 		console.log("data aangekomen")
-        request3.onload = showProducts 
-        request3.send()
+        request4.onload = showProducts 
+        request4.send()
 	  }
 
     // deze functie zet de producten op het scherm
@@ -162,6 +170,7 @@
               clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
               clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
               container.appendChild(clone)
+			  console.log(container + 'alles klaar')
             }
           }
 
