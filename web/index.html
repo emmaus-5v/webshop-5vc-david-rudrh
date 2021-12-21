@@ -121,12 +121,14 @@
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
       // deze functie laadt de producten via de API
 	  function showProductsByGenre(genre_id) {
+		console.log("showProductsByGenre called")
 		// laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
         var request3 = new XMLHttpRequest()
-        request3.open('GET', `/api/products/${genre_id}`, true) 
+        request3.open('GET', `/api/productsByGenre/${genre_id}`, true) 
+		console.log("data aangekomen")
         request3.onload = showProducts 
-        request3.send() 
+        request3.send()
 	  }
 
     // deze functie zet de producten op het scherm
