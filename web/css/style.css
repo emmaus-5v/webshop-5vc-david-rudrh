@@ -41,7 +41,7 @@ footer {
 }
 
 .card {
-  width:200px; 
+  width: 200px; 
   height: 700px; 
   margin-bottom: 20px;
   margin-left: auto;
@@ -109,7 +109,7 @@ body {
 }
 
 #winkelwagen-knop:active {
-  border: 20px, rgb(117, 40, 40);
+  outline: 20px, rgb(117, 40, 40);
 }
 
 /* Dropdown Button */
