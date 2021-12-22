@@ -95,24 +95,9 @@ body {
   background:-webkit-repeating-linear-gradient(82deg, #2f8baf 20%, #165979 80%);
 }
 
-#winkelwagen-knop {
-  background-color: #2f8baf;
-  color: rgb(247, 236, 236);
-  padding: 9px;
-  font-size: 16px;
-  border: none;
-}
-
-#winkelwagen-knop:hover {
-  background-color: #215f77;
-}
-
-#winkelwagen-knop:active {
-  outline: 20px, rgb(117, 40, 40);
-}
 
 /* Dropdown Button */
-.dropbtn {
+.btn {
   background-color: #2f8baf;
   color: rgb(247, 236, 236);
   padding: 9px;
@@ -155,7 +140,7 @@ body {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
+.btn:hover {
   background-color: #266179;
 }
 
