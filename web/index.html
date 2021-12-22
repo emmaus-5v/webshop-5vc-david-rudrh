@@ -44,7 +44,7 @@
 				</div>
 				<template id="genre-item">
 				  <div class="dropdown-content">
-					<span class="GameGenre" onClick="showProductsByGenre(1)">content</span>
+					<span class="GameGenre" onClick="showProductsByGenre(10)">content</span>
 				  </div>
 				</template>
 			  </div>	
@@ -184,8 +184,8 @@
 
       app.appendChild(container)
         
-            var data = JSON.parse(this.response) // vertaal response van API naar array met producten
-            for (let row in data) { // herhaal voor elke product
+            var data = JSON.parse(this.response) // vertaal response van API naar array met genres
+            for (let row in data) { // herhaal voor elk genre
               const Genre = data[row]
 
               // voeg product toe aan DOM, 
