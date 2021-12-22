@@ -161,6 +161,10 @@
       console.log("showProducts called")
       const template = document.querySelector('#productcard');
       const app = document.getElementById('index')
+	  if (app.querySelector(".article-container") != null) { // als er products worden getoond
+			app.removeChild(app.querySelector(".article-container")); // wis de container met alle producten die erin zitten
+	  }
+	  // maak container voor producten
       const container = document.createElement('div')
       container.setAttribute('class', 'container row article-container')
 		
@@ -207,8 +211,9 @@
               // zodat deze zichtbaar wordt op de webpagina
               const clone = template.content.cloneNode(true);
               clone.querySelector(".GameGenre").textContent = Genre.typegame;
-			  clone.querySelector(".GameGenre_id").value = Genre.id; //Dit werkt niet zonder echte reden
-			  // hier moet je de property "onSubmit" de juiste waarde geven
+			  // clone.querySelector(".GameGenre_id").value = Genre.id; //Dit werkt niet zonder echte reden; GEE: ik weet niet wat je hier probeert, de opdracht selecteert een tag met de class "GameGenre_id" uit clone, maar die class is er niet. Zie meer info over querySelector op https://www.w3schools.com/jsref/met_document_queryselector.asp
+			  clone.querySelector(".GameGenre").onClick = `loadProductsByGenre(${Genre.id})`; // GEE hier geef je de property "onClick" de juiste waarde
+			  console.log(`loadProductsByGenre(${Genre.id})`);
               container.appendChild(clone)
             }
           }
