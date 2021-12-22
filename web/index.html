@@ -40,20 +40,12 @@
 			<div id="genre-item-parent" class="dropdown">
 				<button class="button">Genre</button>
 				<div class="dropdown-content">
-					<span class="GameGenre" onClick="loadAllProducts()">all</span>
+					<span onClick="loadAllProducts()">all</span>
 				</div>
-				<div class="dropdown-content">
-					<span id="genre-1" class="GameGenre" onClick="loadProductsByGenre(1)">naam1</span>
-				</div>
-				<div class="dropdown-content">
-					<span id="genre-2" class="GameGenre" onClick="loadProductsByGenre(2)">naam2</span>
-				</div>				
-				<div class="dropdown-content">
-					<span class="GameGenre" onClick="loadAllProducts()">all</span>
 				</div>
 				<template id="genre-item">
 				  <div class="dropdown-content">
-					<span id="genre-1" class="GameGenre" onClick="loadProductsByGenre(1)">content</span>
+					<span class="GameGenre" onClick="loadProductsByGenre(1)">content</span>
 				  </div>
 				</template>
 			  </div>	
@@ -127,17 +119,11 @@
 
 
       })();
-   
-      function removeProducts() {
-      var removeAll = document.querySelector('#productcard');
-	  if(removeAll) document.body.removeChild(removeAll);
-	  }
 
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
       // deze functie laadt de producten via de API
 
 	  function loadAllProducts(){
-		  removeProducts();
 		var request3 = new XMLHttpRequest()
         request3.open('GET', '/api/products', true) 
         request3.onload = showProducts 
@@ -211,7 +197,6 @@
               // zodat deze zichtbaar wordt op de webpagina
               const clone = template.content.cloneNode(true);
               clone.querySelector(".GameGenre").textContent = Genre.typegame;
-			  // clone.querySelector(".GameGenre_id").value = Genre.id; //Dit werkt niet zonder echte reden; GEE: ik weet niet wat je hier probeert, de opdracht selecteert een tag met de class "GameGenre_id" uit clone, maar die class is er niet. Zie meer info over querySelector op https://www.w3schools.com/jsref/met_document_queryselector.asp
 			  clone.querySelector(".GameGenre").onClick = `loadProductsByGenre(${Genre.id})`; // GEE hier geef je de property "onClick" de juiste waarde
 			  console.log(`loadProductsByGenre(${Genre.id})`);
               container.appendChild(clone)
