@@ -40,20 +40,20 @@
 			<div id="genre-item-parent" class="dropdown">
 				<button class="button">Genre</button>
 				<div class="dropdown-content">
-					<span class="GameGenre" onClick="showAllProducts()">all</span>
+					<span class="GameGenre" onClick="loadAllProducts()">all</span>
 				</div>
 				<div class="dropdown-content">
-					<span id="genre-1" class="GameGenre" onClick="showProductsByGenre(1)">naam1</span>
+					<span id="genre-1" class="GameGenre" onClick="loadProductsByGenre(1)">naam1</span>
 				</div>
 				<div class="dropdown-content">
-					<span id="genre-2" class="GameGenre" onClick="showProductsByGenre(2)">naam2</span>
+					<span id="genre-2" class="GameGenre" onClick="loadProductsByGenre(2)">naam2</span>
 				</div>				
 				<div class="dropdown-content">
-					<span class="GameGenre" onClick="showAllProducts()">all</span>
+					<span class="GameGenre" onClick="loadAllProducts()">all</span>
 				</div>
 				<template id="genre-item">
 				  <div class="dropdown-content">
-					<span id="genre-1" class="GameGenre" onClick="showProductsByGenre(1)">content</span>
+					<span id="genre-1" class="GameGenre" onClick="loadProductsByGenre(1)">content</span>
 				  </div>
 				</template>
 			  </div>	
@@ -106,11 +106,11 @@
     // deze functie wordt aangeroepen als de pagina geladen is
     // deze functie laadt de producten via de API
 		(function() { 
+			removeProducts() 
         // your page initialization code here
-        // the DOM will be available here
-       
+        // the DOM will be available here 
         // laad winkelmandje
-        updateBasket()
+        updateBasket() 
 
         // laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
@@ -118,6 +118,7 @@
         request1.open('GET', '/api/products', true) 
         request1.onload = showProducts 
         request1.send() 
+		
 
 		var request2 = new XMLHttpRequest()
         request2.open('GET', '/api/genres', true) 
@@ -125,19 +126,25 @@
         request2.send() 
 
 
+
       })();
    
+      function removeProducts() {
+      var removeAll = document.querySelector('#productcard');
+	  if(removeAll)document.body.removeChild(removeAll);
+	  }
+
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
       // deze functie laadt de producten via de API
 
-	  function showAllProducts(){
+	  function loadAllProducts(){
 		var request3 = new XMLHttpRequest()
         request3.open('GET', '/api/products', true) 
         request3.onload = showProducts 
-        request3.send() 
-	  }
+        request3.send()  
+	  } 
 
-	  function showProductsByGenre(genre_id) {
+	  function loadProductsByGenre(genre_id) { 
 		console.log("showProductsByGenre called")
 		// laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
@@ -145,7 +152,7 @@
         request4.open('GET', `/api/productsByGenre/${genre_id}`, true) 
 		console.log("data aangekomen")
         request4.onload = showProducts 
-        request4.send()
+        request4.send()  
 	  }
 
     // deze functie zet de producten op het scherm
@@ -154,11 +161,10 @@
       console.log("showProducts called")
       const template = document.querySelector('#productcard');
       const app = document.getElementById('index')
-      
       const container = document.createElement('div')
       container.setAttribute('class', 'container row article-container')
 
-      app.appendChild(container)
+      app.appendChild(container) 
         
             var data = JSON.parse(this.response) // vertaal response van API naar array met producten
             for (let row in data) { // herhaal voor elke product
