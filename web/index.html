@@ -106,7 +106,6 @@
     // deze functie wordt aangeroepen als de pagina geladen is
     // deze functie laadt de producten via de API
 		(function() { 
-			removeProducts() 
         // your page initialization code here
         // the DOM will be available here 
         // laad winkelmandje
@@ -131,13 +130,14 @@
    
       function removeProducts() {
       var removeAll = document.querySelector('#productcard');
-	  if(removeAll)document.body.removeChild(removeAll);
+	  if(removeAll) document.body.removeChild(removeAll);
 	  }
 
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
       // deze functie laadt de producten via de API
 
 	  function loadAllProducts(){
+		  removeProducts();
 		var request3 = new XMLHttpRequest()
         request3.open('GET', '/api/products', true) 
         request3.onload = showProducts 
@@ -163,7 +163,7 @@
       const app = document.getElementById('index')
       const container = document.createElement('div')
       container.setAttribute('class', 'container row article-container')
-
+		
       app.appendChild(container) 
         
             var data = JSON.parse(this.response) // vertaal response van API naar array met producten
@@ -207,7 +207,7 @@
               // zodat deze zichtbaar wordt op de webpagina
               const clone = template.content.cloneNode(true);
               clone.querySelector(".GameGenre").textContent = Genre.typegame;
-			  clone.querySelector(".GameGenre_id").value = Genre.id;
+			  clone.querySelector(".GameGenre_id").value = Genre.id; //Dit werkt niet zonder echte reden
 			  // hier moet je de property "onSubmit" de juiste waarde geven
               container.appendChild(clone)
             }
