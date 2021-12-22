@@ -97,7 +97,7 @@ body {
 
 
 /* Dropdown Button */
-.btn {
+.button {
   background-color: #2f8baf;
   color: rgb(247, 236, 236);
   padding: 9px;
@@ -140,7 +140,7 @@ body {
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.btn:hover {
+.button:hover {
   background-color: #266179;
 }
 
