@@ -206,7 +206,8 @@
               // voeg product toe aan DOM, 
               // zodat deze zichtbaar wordt op de webpagina
               const clone = template.content.cloneNode(true);
-              clone.querySelector(".GameGenre").textContent = Genre.typegame
+              clone.querySelector(".GameGenre").textContent = Genre.typegame;
+			  clone.querySelector(".GameGenre_id").value = Genre.id;
 			  // hier moet je de property "onSubmit" de juiste waarde geven
               container.appendChild(clone)
             }
