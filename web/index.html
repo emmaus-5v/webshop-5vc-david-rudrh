@@ -40,7 +40,7 @@
 			<div id="genre-item-parent" class="dropdown">
 				<button class="button">Genre</button>
 				<div class="dropdown-content">
-					<span onClick="loadAllProducts()">all</span>
+					<span onClick="loadAllProducts()">All</span>
 				</div>
 				</div>
 				<template id="genre-item">
@@ -117,7 +117,6 @@
         request2.send() 
 
 
-
       })();
 
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
@@ -131,7 +130,7 @@
 	  } 
 
 	  function loadProductsByGenre(genre_id) { 
-		console.log("showProductsByGenre called")
+		console.log("loadProductsByGenre called")
 		// laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
         var request4 = new XMLHttpRequest()
