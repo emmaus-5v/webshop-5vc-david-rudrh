@@ -37,7 +37,7 @@
 				</li>
 			</ul>
 
-			<div id="genre-item-parent" class="dropdown">
+			<div id="genre-item-parent" class="dropdown">  <!--Dit is het dropdown menu. De onClick zorgt er voor dat de producten waar je op wil sorteren worden geselecteerd.-->
 				<button class="button">Genre</button>
 				<div class="dropdown-content">
 					<span onClick="loadAllProducts()">All</span>
@@ -45,7 +45,7 @@
 				</div>
 				<template id="genre-item">
 				  <div class="dropdown-content">
-					<span class="GameGenre" onClick="loadProductsByGenre(1)">content</span>
+					<span class="GameGenre" onClick="loadProductsByGenre(1)">content</span> 
 				  </div>
 				</template>
 			  </div>	
@@ -94,6 +94,25 @@
 	<script src="/js/basket.js"></script> <!-- functies voor de winkelwagen -->
 	
   <script> // functies om de producten te laden en tonen op de webpagina
+  
+  function loadProductsByGenre(genre_id) { 
+		console.log("loadProductsByGenre called")
+		// laad alle producten die bij een bepaald genre horen
+        // de functie showProducts wordt aangeroepen als er antwoord van de API is
+        var request1 = new XMLHttpRequest()
+        request1.open('GET', `/api/productsByGenre/${genre_id}`, true)  
+		console.log("data aangekomen")
+        request1.onload = showProducts 
+        request1.send()  
+	  }
+
+	  function loadAllProducts(){
+		  //laad alle producten
+		var request2 = new XMLHttpRequest()
+        request2.open('GET', '/api/products', true) 
+        request2.onload = showProducts 
+        request2.send()  
+	  } 
     
     // deze functie wordt aangeroepen als de pagina geladen is
     // deze functie laadt de producten via de API
@@ -105,16 +124,13 @@
 
         // laad producten
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
-        var request1 = new XMLHttpRequest()
-        request1.open('GET', '/api/products', true) 
-        request1.onload = showProducts 
-        request1.send() 
+        loadAllProducts();
 		
 
-		var request2 = new XMLHttpRequest()
-        request2.open('GET', '/api/genres', true) 
-        request2.onload = showGenres 
-        request2.send() 
+		var request3 = new XMLHttpRequest()
+        request3.open('GET', '/api/genres', true)  //Dit laadt alle genres voor in het dropdown menu.
+        request3.onload = showGenres 
+        request3.send() 
 
 
       })();
@@ -122,23 +138,6 @@
 	  // deze functie wordt aangeroepen als een genre is geselecteerd
       // deze functie laadt de producten via de API
 
-	  function loadAllProducts(){
-		var request3 = new XMLHttpRequest()
-        request3.open('GET', '/api/products', true) 
-        request3.onload = showProducts 
-        request3.send()  
-	  } 
-
-	  function loadProductsByGenre(genre_id) { 
-		console.log("loadProductsByGenre called")
-		// laad producten
-        // de functie showProducts wordt aangeroepen als er antwoord van de API is
-        var request4 = new XMLHttpRequest()
-        request4.open('GET', `/api/productsByGenre/${genre_id}`, true) 
-		console.log("data aangekomen")
-        request4.onload = showProducts 
-        request4.send()  
-	  }
 
     // deze functie zet de producten op het scherm
     // nadat de API is aangeroepen
