@@ -105,13 +105,15 @@ insert into GameGenre_Game (products_id, typegame_id) values (7, 4);
 insert into GameGenre_Game (products_id, typegame_id) values (7, 10);
 insert into GameGenre_Game (products_id, typegame_id) values (7, 13);
 insert into GameGenre_Game (products_id, typegame_id) values (8, 1);
+insert into GameGenre_Game (products_id, typegame_id) values (8, 5);
 insert into GameGenre_Game (products_id, typegame_id) values (9, 3);
 insert into GameGenre_Game (products_id, typegame_id) values (9, 5);
 insert into GameGenre_Game (products_id, typegame_id) values (9, 7);
 insert into GameGenre_Game (products_id, typegame_id) values (10, 3);
 insert into GameGenre_Game (products_id, typegame_id) values (10, 6);
 insert into GameGenre_Game (products_id, typegame_id) values (10, 9);
-insert into GameGenre_Game (products_id, typegame_id) values (11, 10);
+insert into GameGenre_Game (products_id, typegame_id) values (10, 13);
+insert into GameGenre_Game (products_id, typegame_id) values (11, 11);
 insert into GameGenre_Game (products_id, typegame_id) values (11, 13);
 
 
