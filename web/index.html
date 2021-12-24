@@ -96,7 +96,7 @@
   <script> // functies om de producten te laden en tonen op de webpagina
   
   function loadProductsByGenre(genre_id) { 
-		console.log("loadProductsByGenre called")
+		console.log(`loadProductsByGenre(${genre_id}) called`)
 		// laad alle producten die bij een bepaald genre horen
         // de functie showProducts wordt aangeroepen als er antwoord van de API is
         var request1 = new XMLHttpRequest()
@@ -195,7 +195,8 @@
               // zodat deze zichtbaar wordt op de webpagina
               const clone = template.content.cloneNode(true);
               clone.querySelector(".GameGenre").textContent = Genre.typegame;
-			  clone.querySelector(".GameGenre").onClick = `loadProductsByGenre(${Genre.id})`; // GEE hier geef je de property "onClick" de juiste waarde
+			  clone.querySelector(".GameGenre").setAttribute('onClick', `loadProductsByGenre(${Genre.id})`);  // GEE hier geef je de property "onClick" de juiste waarde
+			  clone.querySelector(".GameGenre").setAttribute('id', `genre-${Genre.id}`);  // GEE hier geef je de property "id" de juiste waarde, je gebruikt de id niet maar wellicht is het in de toekomst handig
 			  console.log(`loadProductsByGenre(${Genre.id})`);
               container.appendChild(clone)
             }
